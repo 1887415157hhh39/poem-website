@@ -1,0 +1,23 @@
+{
+  "source": "中国传媒大学本科通识素养诗词基本篇目.pdf",
+  "sha256": "58ac548d054dcd397d5786fb8c35fbc2ebc015cf93f9aea7ca98d9c3113512ae",
+  "pdfPages": 50,
+  "total": 200,
+  "shi": 162,
+  "ci": 38,
+  "corrections": [
+    {
+      "id": "ci-9",
+      "physicalPage": 44,
+      "before": "重湖叠ꧼ清嘉",
+      "after": "重湖叠巘清嘉",
+      "evidence": "PDF原页图像核对"
+    }
+  ],
+  "prefacesSeparated": [
+    "shi-118",
+    "ci-31",
+    "ci-33"
+  ],
+  "verification": "目录数量和连续编号、跨页正文、非中文异常字符已检查；未声称逐字人工校对全部原文。按校方PDF保留用字，网站提供原页核对。"
+}

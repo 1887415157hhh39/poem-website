@@ -1,0 +1,9 @@
+node_modules/
+.npm-cache/
+dist/
+.env*
+tmp/
+output/qa/
+*.log
+.playwright-cli/
+output/playwright/
