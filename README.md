@@ -1,5 +1,7 @@
 # 温故 · 诗词备赛
 
+[在线使用](https://1887415157hhh39.github.io/poem-website/) · [GitHub仓库](https://github.com/1887415157hhh39/poem-website)
+
 面向院级诗词抢答比赛的个人备赛网站，支持手机与电脑，使用GitHub Pages托管。
 
 - 学校指定200篇：诗162篇、词38篇，包含现代诗。

@@ -28,4 +28,4 @@
 - [x] 2. 先编写`tests/study.test.mjs`，再实现`src/lib/study.mjs`：normalizeAnswer、makeQuestions、gradeAnswer、recordAttempt、scheduleReview、validateBackup。运行Node测试。
 - [x] 3. 实现`src/App.jsx`、`src/components/`和`src/styles.css`：首页、题库、背诵、抢答、错句与设置，连接真实进度，验证完整操作。
 - [x] 4. 生成桌面/手机截图，对照融合图记录`design-qa.md`并修复；检查可访问性和控制台。
-- [ ] 5. 配置`.github/workflows/deploy.yml`，构建验证后创建GitHub仓库、推送、开启Pages，并核验线上资源。
+- [x] 5. 配置`.github/workflows/deploy.yml`，构建验证后创建GitHub仓库、推送、开启Pages，并核验线上资源。

@@ -36,3 +36,11 @@ Mobile: `docs/design/implementation-mobile.png`, viewport390 x 844, full-page ca
 ## Follow-up polish
 - P3: generated lettering and subtle paper texture differ slightly from deterministic browser fonts and flat surfaces.
 - No P0/P1/P2 findings remain. Automated accessibility checks do not replace assistive-device user testing.
+
+## Verified live deployment
+- Site: https://1887415157hhh39.github.io/poem-website/
+- Source repository: https://github.com/1887415157hhh39/poem-website
+- GitHub Actions run38859273503: build and deployment succeeded on2026-10-16.
+- Live browser verified the homepage, real random quiz prompt, PDF200/%PDF- header, both local fonts loaded, zero horizontal overflow, and fresh0/200 progress.
+- Live browser console:0errors,0warnings. Capture: `docs/design/online-desktop.png`.
+- Independent HTTP HEAD checks returned200 for the index, serif font and curriculum PDF with correct content types.
