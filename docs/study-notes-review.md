@@ -46,4 +46,10 @@ npm run test:sites
 
 实测截图：[桌面阅读](design/study-notes-desktop.png)、[手机阅读](design/study-notes-mobile.png)、[手机背诵思路](design/study-notes-thread-mobile.png)。
 
+## 发布验收
+
+代码提交`bce635693eee9709d66524854947df8ba73d366b`已发布至[GitHub Pages](https://1887415157hhh39.github.io/poem-website/)，[工作流38877975703](https://github.com/1887415157hhh39/poem-website/actions/runs/38877975703)的测试、构建与部署全部成功。
+
+在正式网址使用独立390像素触屏访客上下文验证：初始不加载注释；展开后五组JSON及参考表共六个带哈希资源均从`/poem-website/assets/`返回200；《将进酒》原句聚焦、模式切换收起与遮字定位不揭晓正常；古诗、长篇、现代诗与词加载正常，《山中》材料提示可见，无水平溢出或学习状态写入。正式页面axe扫描0项违规、未捕获页面异常0项。所有访客测试上下文结束后关闭，未操作用户真实邮箱或进度。
+
 设计与范围见[设计说明](superpowers/specs/2026-10-16-study-notes-design.md)，执行过程见[计划](superpowers/plans/2026-10-16-study-notes-plan.md)。
