@@ -12,9 +12,6 @@ import {
 } from "@phosphor-icons/react";
 import poems from "./data/poems.json";
 import {
-  STATE_KEY,
-  emptyState,
-  validateBackup,
   scheduleReview,
   recordAttempt,
   selectDaily,
@@ -25,21 +22,13 @@ import { Library } from "./components/Library.jsx";
 import { Trainer } from "./components/Trainer.jsx";
 import { Mistakes } from "./components/Mistakes.jsx";
 import { Settings } from "./components/Settings.jsx";
-const validIds = new Set(poems.map((p) => p.id));
+import { useCloudProgress } from "./hooks/useCloudProgress.js";
 const nav = [
   ["today", "今日计划", CalendarDots],
   ["library", "全部篇目", BookOpen],
   ["train", "抢答训练", Lightning],
   ["mistakes", "错句复习", Notebook],
 ];
-function initialState() {
-  try {
-    const raw = localStorage.getItem(STATE_KEY);
-    return raw ? validateBackup(JSON.parse(raw), validIds) : emptyState();
-  } catch {
-    return emptyState();
-  }
-}
 function routeFromHash() {
   const [page, id] = location.hash.slice(1).split("/");
   return {
@@ -57,9 +46,9 @@ function routeFromHash() {
   };
 }
 export function App() {
-  const [state, setState] = useState(initialState),
-    [route, setRoute] = useState(routeFromHash),
-    [storageError, setStorageError] = useState(false),
+  const { state, setState, storageError, ready, cloud, importBackup } =
+    useCloudProgress();
+  const [route, setRoute] = useState(routeFromHash),
     [trainingContext, setTrainingContext] = useState(null),
     [trainingKey, setTrainingKey] = useState(0),
     [toast, setToast] = useState("");
@@ -68,14 +57,6 @@ export function App() {
     const id = setInterval(() => setDate(todayKey()), 60000);
     return () => clearInterval(id);
   }, []);
-  useEffect(() => {
-    try {
-      localStorage.setItem(STATE_KEY, JSON.stringify(state));
-      setStorageError(false);
-    } catch {
-      setStorageError(true);
-    }
-  }, [state]);
   useEffect(() => {
     const listener = () => {
       setRoute(routeFromHash());
@@ -93,6 +74,14 @@ export function App() {
     location.hash = `${page}${id ? `/${id}` : ""}`;
     window.scrollTo(0, 0);
   }, []);
+  useEffect(() => {
+    if (cloud.recovery) navigate("settings");
+  }, [cloud.recovery, navigate]);
+  useEffect(() => {
+    setToast("");
+    setTrainingContext(null);
+    setTrainingKey((k) => k + 1);
+  }, [cloud.session?.user.id]);
   function read(id) {
     setState((s) => ({ ...s, lastPoem: id }));
     navigate("read", id);
@@ -124,6 +113,12 @@ export function App() {
       poems[(poems.indexOf(selected) + 1) % poems.length];
     read(next.id);
   }
+  if (!ready)
+    return (
+      <div className="auth-loading" role="status">
+        温故 · 正在恢复账号与本机进度…
+      </div>
+    );
   return (
     <div className="app-shell">
       <a
@@ -175,14 +170,20 @@ export function App() {
           </div>
           <div className="local-note">
             <Database size={19} />
-            <span>{storageError ? "进度暂未保存" : "浏览器保存进度"}</span>
+            <span>
+              {storageError
+                ? "本机保存失败"
+                : cloud.session
+                  ? cloud.label
+                  : "浏览器保存进度"}
+            </span>
           </div>
           <button
             className={`nav-item settings-nav ${route.page === "settings" ? "active" : ""}`}
             onClick={() => navigate("settings")}
           >
             <GearSix size={23} />
-            <span>设置与备份</span>
+            <span>设置与同步</span>
           </button>
         </div>
       </aside>
@@ -208,6 +209,12 @@ export function App() {
             </span>
           </div>
           <button
+            className="account-entry"
+            onClick={() => navigate("settings")}
+          >
+            {cloud.label}
+          </button>
+          <button
             className="mobile-settings icon-button"
             aria-label="设置与备份"
             onClick={() => navigate("settings")}
@@ -220,7 +227,22 @@ export function App() {
             浏览器暂时无法保存进度。请到设置导出备份，避免关闭后丢失。
           </div>
         )}
-        <main id="main-content" tabIndex={-1}>
+        {cloud.guestAvailable && route.page !== "settings" && (
+          <div className="notice" role="status">
+            发现这台设备原有的学习记录。
+            <button
+              className="text-button"
+              onClick={() => navigate("settings")}
+            >
+              前往设置确认合并
+            </button>
+          </div>
+        )}
+        <main
+          id="main-content"
+          tabIndex={-1}
+          key={cloud.session?.user.id || "guest"}
+        >
           {route.page === "today" && (
             <>
               <section className="home-heading">
@@ -389,11 +411,18 @@ export function App() {
               setState={setState}
               poems={poems}
               storageError={storageError}
+              cloud={cloud}
+              onImport={importBackup}
             />
           )}
         </main>
         <footer className="app-footer">
-          温故而知新。 <span>学习记录仅存于当前浏览器，建议定期备份。</span>
+          温故而知新。{" "}
+          <span>
+            {cloud.session
+              ? "邮箱账号保存云端进度，本机留有离线副本。"
+              : "当前使用本机进度，登录邮箱可跨设备同步。"}
+          </span>
         </footer>
       </div>
       <nav className="mobile-nav" aria-label="移动端导航">

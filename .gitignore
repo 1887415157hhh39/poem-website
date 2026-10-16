@@ -2,6 +2,7 @@ node_modules/
 .npm-cache/
 dist/
 .env*
+!.env.example
 tmp/
 output/qa/
 *.log

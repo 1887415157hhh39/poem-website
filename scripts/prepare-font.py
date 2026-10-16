@@ -16,7 +16,7 @@ source=args.font_source
 if not source.exists():
  source.parent.mkdir(parents=True,exist_ok=True)
  urllib.request.urlretrieve(f'https://raw.githubusercontent.com/google/fonts/main/ofl/{folder}/{family}%5Bwght%5D.ttf',source)
-text=''.join(p.read_text(encoding='utf-8') for p in (root/'src').rglob('*') if p.suffix in {'.jsx','.json','.mjs','.css'})
+text=''.join(p.read_text(encoding='utf-8') for p in (root/'src').rglob('*') if p.suffix in {'.jsx','.js','.json','.mjs','.css'})
 text+=''.join(chr(i) for i in range(32,127))+'温故而知新□＿〇一二三四五六七八九十'
 font=TTFont(source);options=subset.Options();options.flavor='woff2';options.layout_features=['*'];options.name_IDs=['*'];options.name_legacy=True;options.name_languages=['*']
 subsetter=subset.Subsetter(options=options);subsetter.populate(text=text);subsetter.subset(font)

@@ -9,6 +9,7 @@
 - Competition: buzzer format, first half of November; no exact day announced.
 - User requested GitHub hosting; deploy the static client through GitHub Pages. Current project is the authorized checkout.
 - Browser fallback: user explicitly allowed independent Playwright verification after in-app browser connection failed.
+- User requested cross-device progress and chose email login on2026-10-16. Extend the existing site with Supabase email/password authentication, explicit guest-progress import, account-isolated offline caches and conflict-safe synchronization. Do not claim cloud sync is live until the backend is connected and verified.
 
 Run the local server yourself and open the preview in the browser available to this environment. Do not give the user server-start instructions when you can run it.
 

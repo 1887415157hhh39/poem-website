@@ -5,8 +5,16 @@ import {
   GearSix,
   ArrowSquareOut,
 } from "@phosphor-icons/react";
-import { validateBackup } from "../lib/study.mjs";
-export function Settings({ state, setState, poems, storageError }) {
+import { validateSyncState } from "../lib/sync-state.mjs";
+import { AccountPanel } from "./AccountPanel.jsx";
+export function Settings({
+  state,
+  setState,
+  poems,
+  storageError,
+  cloud,
+  onImport,
+}) {
   const input = useRef(null);
   const [message, setMessage] = useState(""),
     [pending, setPending] = useState(null);
@@ -38,7 +46,7 @@ export function Settings({ state, setState, poems, storageError }) {
     try {
       if (file.size > 10_000_000)
         throw new Error("备份文件过大，请选择10MB以内的JSON。");
-      const data = validateBackup(
+      const data = validateSyncState(
         JSON.parse(await file.text()),
         new Set(poems.map((p) => p.id)),
       );
@@ -61,6 +69,7 @@ export function Settings({ state, setState, poems, storageError }) {
         </div>
         <GearSix size={40} weight="thin" />
       </div>
+      <AccountPanel cloud={cloud} storageError={storageError} />
       <div className="settings-grid">
         <section>
           <h2>每日目标</h2>
@@ -116,7 +125,9 @@ export function Settings({ state, setState, poems, storageError }) {
         <section>
           <h2>备份与转移</h2>
           <p>
-            进度只保存在当前设备的当前浏览器。清除浏览器数据可能丢失记录，建议定期导出；换设备时手动导入。
+            {cloud.session
+              ? "登录后进度自动同步到云端。你也可以保留独立的文件备份，导入时会与账号已有记录合并。"
+              : "未登录时进度保存在当前浏览器。建议定期导出；也可以登录邮箱，在多台设备间自动同步。"}
           </p>
           {storageError && (
             <p className="notice error">
@@ -149,18 +160,21 @@ export function Settings({ state, setState, poems, storageError }) {
               <p>
                 此备份包含{Object.keys(pending.learning).length}篇学习记录、
                 {pending.history.length}
-                条答题记录。导入会替换当前进度，建议先导出当前记录。
+                条答题记录。
+                {cloud.session
+                  ? "导入后按记录时间与账号进度合并，较新的记录优先。"
+                  : "导入会替换当前进度，建议先导出当前记录。"}
               </p>
               <div className="button-row">
                 <button
                   className="button"
                   onClick={() => {
-                    setState(pending);
+                    onImport(pending);
                     setPending(null);
                     setMessage("备份已导入。");
                   }}
                 >
-                  确认替换并导入
+                  {cloud.session ? "确认合并并导入" : "确认替换并导入"}
                 </button>
                 <button
                   className="text-button"
