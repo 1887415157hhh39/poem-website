@@ -80,6 +80,7 @@ test("古诗语境和专名读音不能由常见词误判", () => {
   assert.equal(reading("ci-30", "的卢"), "dí lú");
   assert.equal(reading("ci-36", "数风流"), "shǔ fēng liú");
   assert.equal(reading("ci-37", "如斯夫"), "rú sī fú");
+  assert.equal(reading('shi-161','岸呵'),'àn a');
   assert.equal(data.poems["shi-141"].credit.join(" "), "zēng jī");
   assert.equal(data.poems["ci-12"].title.join(" "), "tà suō xíng");
 });

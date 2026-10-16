@@ -135,6 +135,7 @@
     ]
   },
   "fixes": [
+    {"poemId":"shi-161","field":"lines","text":"岸呵","reading":"àn a","reason":"句中呼告后的语气助词呵同啊，读轻声a，不是呵斥或笑声hē。","sources":["dictionary"]},
     {
       "poemId": "*",
       "field": "all",
