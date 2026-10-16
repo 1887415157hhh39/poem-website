@@ -5,12 +5,13 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "node scripts/check-cloud-config.mjs && npm run check:pinyin && vite build && node scripts/prepare-sites-build.mjs",
+    "build": "node scripts/check-cloud-config.mjs && npm run check:pinyin && npm run check:notes && vite build && node scripts/prepare-sites-build.mjs",
+    "check:notes": "node scripts/check-study-notes.mjs",
     "prepare:pinyin": "node scripts/prepare-pinyin.mjs",
     "check:pinyin": "node scripts/prepare-pinyin.mjs --check",
     "preview": "vite preview",
     "test:sites": "node --test tests/sites-worker.test.mjs",
-    "test": "node --test tests/corpus.test.mjs tests/study.test.mjs tests/sync.test.mjs tests/database.test.mjs tests/cloud-config.test.mjs tests/pinyin.test.mjs"
+    "test": "node --test tests/corpus.test.mjs tests/study.test.mjs tests/sync.test.mjs tests/database.test.mjs tests/cloud-config.test.mjs tests/pinyin.test.mjs tests/study-notes.test.mjs"
   },
   "dependencies": {
     "@phosphor-icons/react": "^2.1.10",

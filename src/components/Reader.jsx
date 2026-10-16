@@ -13,6 +13,7 @@ import { maskLine } from "../lib/study.mjs";
 import pinyinData from "../data/pinyin.json";
 import { PINYIN_KEY, poemCredit } from "../lib/pinyin.mjs";
 import { PinyinText } from "./PinyinText.jsx";
+import { StudyNotes } from "./StudyNotes.jsx";
 const pinyinReview = pinyinData.review;
 const SIZE_KEY = "wengu-reader-size-v1";
 const sizes = [
@@ -288,13 +289,14 @@ export function Reader({ poem, learning, onRate, onBack, onTrain, onNext }) {
           </p>
         </details>
       )}
+      <StudyNotes key={mode} poem={poem} />
       <article
         className={`poem-lines ${poem.form === "现代诗" ? "modern" : ""}`}
         aria-label={`${poem.title}原文`}
       >
         {poem.lines.map((line, i) =>
           mode === "full" ? (
-            <p key={i}>
+            <p key={i} id={`${poem.id}-line-${i}`} tabIndex={-1}>
               {showPinyin ? (
                 <PinyinText
                   text={line}
@@ -309,6 +311,7 @@ export function Reader({ poem, learning, onRate, onBack, onTrain, onNext }) {
             <button
               className="masked-line"
               key={i}
+              id={`${poem.id}-line-${i}`}
               aria-label={`第${i + 1}行，点按${revealed.has(i) ? "遮住" : "揭晓"}`}
               aria-pressed={revealed.has(i)}
               onClick={() =>
