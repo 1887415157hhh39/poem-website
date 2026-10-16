@@ -7,6 +7,7 @@
 - Integrate daily spaced review, progressive character masking, timed individual recall, typed answer grading, and mistake practice. User approved this combined direction on 2026-10-16.
 - Exactly 200 works from the supplied CUC PDF, including modern poetry. Preserve source text and page provenance.
 - Competition: buzzer format, first half of November; no exact day announced.
+- User requested accurate pinyin and on2026-10-16 confirmed modern Mandarin plus common textbook readings, with no additional contest-specific pronunciations. Add a default-off ruby toggle on the existing Reader; hide syllables for masked characters. Preserve original corpus and cloud progress schema. Build-only dictionaries plus scoped corrections generate static annotations for all200 works; document disputed readings and provenance. See `docs/pinyin-review.md`.
 - User requested GitHub hosting; deploy the static client through GitHub Pages. Current project is the authorized checkout.
 - Browser fallback: user explicitly allowed independent Playwright verification after in-app browser connection failed.
 - User requested cross-device progress and chose email login on2026-10-16. Extend the existing site with Supabase email/password authentication, explicit guest-progress import, account-isolated offline caches and conflict-safe synchronization. Do not claim cloud sync is live until the backend is connected and verified.

@@ -9,6 +9,10 @@ import {
   Clock,
 } from "@phosphor-icons/react";
 import { maskLine } from "../lib/study.mjs";
+import pinyinData from "../data/pinyin.json";
+import { PINYIN_KEY, poemCredit } from "../lib/pinyin.mjs";
+import { PinyinText } from "./PinyinText.jsx";
+const pinyinReview = pinyinData.review;
 
 export const sourceLink = (p) =>
   `${import.meta.env.BASE_URL}curriculum.pdf#page=${p.sourcePage}`;
@@ -109,8 +113,24 @@ export function Reader({ poem, learning, onRate, onBack, onTrain, onNext }) {
   const [mode, setMode] = useState("full");
   const [revealed, setRevealed] = useState(new Set());
   const [rated, setRated] = useState(false);
+  const [showPinyin, setShowPinyin] = useState(() => {
+    try {
+      return localStorage.getItem(PINYIN_KEY) === "true";
+    } catch {
+      return false;
+    }
+  });
+  const annotation = pinyinData.poems[poem.id];
+  const notes = pinyinReview.notes[poem.id] || [];
+  function togglePinyin() {
+    const next = !showPinyin;
+    setShowPinyin(next);
+    try {
+      localStorage.setItem(PINYIN_KEY, String(next));
+    } catch {}
+  }
   return (
-    <div className="reader-page">
+    <div className={`reader-page ${showPinyin ? "with-pinyin" : ""}`}>
       <button className="text-button back" onClick={onBack}>
         <ArrowLeft size={18} /> 全部篇目
       </button>
@@ -120,12 +140,22 @@ export function Reader({ poem, learning, onRate, onBack, onTrain, onNext }) {
             {poem.category} · 第{poem.number}篇{" "}
             {poem.form === "现代诗" && "· 现代诗"}
           </div>
-          <h1>{poem.title}</h1>
+          <h1 aria-label={poem.title}>
+            {showPinyin ? (
+              <PinyinText text={poem.title} readings={annotation.title} />
+            ) : (
+              poem.title
+            )}
+          </h1>
           <p>
-            {poem.author === "诗经"
-              ? `《${poem.fullTitle.split("·").slice(0, -1).join("·")}》`
-              : poem.author}
-            {poem.subtitle && ` · ${poem.subtitle}`}
+            {showPinyin ? (
+              <PinyinText
+                text={poemCredit(poem)}
+                readings={annotation.credit}
+              />
+            ) : (
+              poemCredit(poem)
+            )}
           </p>
         </div>
         <SourceLink poem={poem} />
@@ -138,12 +168,54 @@ export function Reader({ poem, learning, onRate, onBack, onTrain, onNext }) {
             setRevealed(new Set());
           }}
         />
-        <span>遮字时，点按诗句可临时查看</span>
+        <div className="reader-pinyin-control">
+          <button
+            className="button secondary pinyin-toggle"
+            aria-pressed={showPinyin}
+            onClick={togglePinyin}
+          >
+            {showPinyin ? "隐藏拼音" : "显示拼音"}
+          </button>
+          <span>遮字时，点按诗句可临时查看</span>
+        </div>
       </div>
+      {showPinyin && (
+        <details className="pinyin-explanation">
+          <summary>注音规则{notes.length ? "与本篇易读错字" : ""}</summary>
+          <p>
+            按现代普通话与教材常用读法，标注字典本调；朗读时“一、不”等仍按语流变调。遮住的字同时隐藏拼音。
+          </p>
+          <p>
+            由词典生成初稿，并按原句重点校核多音字、通假字和专名；有异读时在此说明。
+          </p>
+          {notes.map((note, i) => (
+            <p key={i}>
+              {note.text}{" "}
+              {note.sources.map((source) => (
+                <a
+                  key={source}
+                  href={pinyinReview.sources[source].url}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {pinyinReview.sources[source].title}{" "}
+                  <ArrowSquareOut size={13} />
+                </a>
+              ))}
+            </p>
+          ))}
+        </details>
+      )}
       {poem.preface && (
         <details className="preface">
           <summary>小序 · 不纳入随机练习</summary>
-          <p>{poem.preface}</p>
+          <p>
+            {showPinyin ? (
+              <PinyinText text={poem.preface} readings={annotation.preface} />
+            ) : (
+              poem.preface
+            )}
+          </p>
         </details>
       )}
       <article
@@ -152,7 +224,13 @@ export function Reader({ poem, learning, onRate, onBack, onTrain, onNext }) {
       >
         {poem.lines.map((line, i) =>
           mode === "full" ? (
-            <p key={i}>{line}</p>
+            <p key={i}>
+              {showPinyin ? (
+                <PinyinText text={line} readings={annotation.lines[i]} />
+              ) : (
+                line
+              )}
+            </p>
           ) : (
             <button
               className="masked-line"
@@ -166,7 +244,18 @@ export function Reader({ poem, learning, onRate, onBack, onTrain, onNext }) {
                 })
               }
             >
-              {revealed.has(i) ? line : maskLine(line, mode)}
+              {showPinyin ? (
+                <PinyinText
+                  text={line}
+                  readings={annotation.lines[i]}
+                  mode={mode}
+                  revealed={revealed.has(i)}
+                />
+              ) : revealed.has(i) ? (
+                line
+              ) : (
+                maskLine(line, mode)
+              )}
             </button>
           ),
         )}

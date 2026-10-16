@@ -1,0 +1,3011 @@
+{
+  "version": 1,
+  "sources": {
+    "dictionary": {
+      "title": "开源字词候选词典；结合原句语义人工选择读音",
+      "url": "https://github.com/chinese-data/pinyin-pro-data"
+    },
+    "jigu": {
+      "title": "古文岛《击鼓》注释：镗、于嗟、成说",
+      "url": "https://www.gushiwen.cn/GuShiWen_179cbb1444.aspx"
+    },
+    "qiao": {
+      "title": "古文岛《淇奥》译文及注释",
+      "url": "https://www.gushiwen.cn/shiwenv_7b470719ac69.aspx"
+    },
+    "qiyue": {
+      "title": "古文岛《七月》译文及注释",
+      "url": "https://www.gushiwen.cn/shiwenv_5bb99a1c18ba.aspx"
+    },
+    "shangye": {
+      "title": "古文岛《上邪》注释：邪、衰、雨雪",
+      "url": "https://www.gushiwen.cn/GuShiWen_ac813f9dab.aspx"
+    },
+    "xiangshu": {
+      "title": "中国哲学书电子化计划《相鼠》词条",
+      "url": "https://ctext.org/dictionary.pl?char=%E7%9B%B8%E9%BC%A0&if=gb"
+    },
+    "haoli": {
+      "title": "古文岛《蒿里行》：还通旋",
+      "url": "https://www.gushiwen.cn/gushiwen_af1e1ff4a3.aspx"
+    },
+    "jinjiu": {
+      "title": "古文之家《将进酒》：诗题及正文qiāng，与携出义jiāng区别",
+      "url": "https://www.cngwzj.com/pygushi/TangDai/12843/"
+    },
+    "zhong": {
+      "title": "汉典“重”：tóng，晚熟谷物义",
+      "url": "https://www.zdic.net/hant/%E9%87%8D"
+    },
+    "zengji": {
+      "title": "统编语文教材三衢道中作者注音释疑",
+      "url": "https://k.sina.cn/article_2671642661_9f3e082501900t8aq.html"
+    },
+    "qiyue-tup": {
+      "title": "清华大学出版社《七月》节选注释：貉通祃mà",
+      "url": "https://www.tup.com.cn/upload/books/yz/101610-01.pdf"
+    },
+    "zhongjiao": {
+      "title": "汉典“重较”：chóng jué",
+      "url": "https://www.zdic.net/hans/%E9%87%8D%E8%BE%83"
+    },
+    "congcong": {
+      "title": "古文之家“二之日凿冰冲冲”：chōng chōng",
+      "url": "https://m.cngwzj.com/shijupy/html/10623.html"
+    },
+    "xiuneng": {
+      "title": "《离骚》修能音义教材研讨：néng与tài两种解释",
+      "url": "https://aimg8.dlssyht.cn/u/2056134/ueditor/file/1029/2056134/1692344433611554.pdf"
+    }
+  },
+  "notes": {
+    "shi-1": [
+      {
+        "text": "“镗”作鼓声读 tāng；“于嗟”的“于”读 xū。“成说”按誓约义标 shuō，另有 yuè 的注本读法。",
+        "sources": [
+          "jigu"
+        ]
+      }
+    ],
+    "shi-3": [
+      {
+        "text": "“淇奥”读 qí yù；“会弁”的“会”读 kuài。“绿竹”按常用绿色竹子解释读 lǜ，另有通“菉”的草木解释。",
+        "sources": [
+          "qiao",
+          "zhongjiao"
+        ]
+      }
+    ],
+    "shi-6": [
+      {
+        "text": "本篇“载”作语助词读 zài；“亨葵”通“烹”，读 pēng；“重穋”的“重”指晚熟谷物，读 tóng。",
+        "sources": [
+          "qiyue",
+          "zhong"
+        ]
+      },
+      {
+        "text": "“于貉”按教材通“祃”的田猎祭祀解释读 mà，另有捕貉解释读 hé；“剥枣”按通“扑”读 pū，也有 bō 的注本读法。“冲冲”按现代常用读 chōng chōng，古注另记读如“沉”。",
+        "sources": [
+          "qiyue-tup",
+          "qiyue",
+          "congcong"
+        ]
+      }
+    ],
+    "shi-15": [
+      {
+        "text": "“上邪”读 shàng yé；“雨雪”是降雪的动词用法，读 yù xuě；“衰”按本篇注释读 cuī。",
+        "sources": [
+          "shangye"
+        ]
+      }
+    ],
+    "shi-26": [
+      {
+        "text": "“嗣还”的“还”通“旋”，本篇读 xuán，意为随即。",
+        "sources": [
+          "haoli"
+        ]
+      }
+    ],
+    "shi-85": [
+      {
+        "text": "诗题及劝酒处“将进酒”读 qiāng jìn jiǔ；“呼儿将出”的“将”读 jiāng，意思是拿出。",
+        "sources": [
+          "jinjiu"
+        ]
+      }
+    ],
+    "shi-141": [
+      {
+        "text": "作者按统编教材常用读法标 zēng jī；部分旧资料将“几”标为 jǐ。",
+        "sources": [
+          "zengji"
+        ]
+      }
+    ],
+    "shi-7": [
+      {
+        "text": "“修能”采用教材中通“态”、美好容态的解释，读 xiū tài；另有按才能义读 néng 的解释。",
+        "sources": [
+          "xiuneng"
+        ]
+      }
+    ]
+  },
+  "fixes": [
+    {
+      "poemId": "*",
+      "field": "all",
+      "text": "朝露",
+      "reading": "zhāo lù",
+      "reason": "清晨的露水，朝读zhāo。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "*",
+      "field": "all",
+      "text": "一朝",
+      "reading": "yī zhāo",
+      "reason": "一旦或某一天，朝读zhāo。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "*",
+      "field": "all",
+      "text": "明朝",
+      "reading": "míng zhāo",
+      "reason": "所选篇目均指明天，不是朝代名称。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "*",
+      "field": "all",
+      "text": "今朝",
+      "reading": "jīn zhāo",
+      "reason": "现在、今天，朝读zhāo。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "*",
+      "field": "all",
+      "text": "朝朝",
+      "reading": "zhāo zhāo",
+      "reason": "每天、每日，朝读zhāo。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "*",
+      "field": "all",
+      "text": "应怜",
+      "reading": "yīng lián",
+      "reason": "应当怜惜，情态义应读yīng。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "*",
+      "field": "all",
+      "text": "应照",
+      "reading": "yīng zhào",
+      "reason": "应当照着，情态义应读yīng。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "*",
+      "field": "all",
+      "text": "应似",
+      "reading": "yīng sì",
+      "reason": "应当像，情态义应读yīng。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "*",
+      "field": "all",
+      "text": "磅礴",
+      "reading": "páng bó",
+      "reason": "形容盛大，磅读páng。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "*",
+      "field": "all",
+      "text": "只愿",
+      "reading": "zhǐ yuàn",
+      "reason": "只是、仅仅，副词只读zhǐ。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "*",
+      "field": "all",
+      "text": "只言",
+      "reading": "zhǐ yán",
+      "reason": "只是说，副词只读zhǐ。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-1",
+      "field": "all",
+      "text": "其镗",
+      "reading": "qí tāng",
+      "reason": "鼓声镗读tāng。",
+      "sources": [
+        "jigu"
+      ]
+    },
+    {
+      "poemId": "shi-1",
+      "field": "all",
+      "text": "孙子仲",
+      "reading": "sūn zǐ zhòng",
+      "reason": "字子仲，子不是轻声后缀。",
+      "sources": [
+        "jigu"
+      ]
+    },
+    {
+      "poemId": "shi-1",
+      "field": "all",
+      "text": "爰处",
+      "reading": "yuán chǔ",
+      "reason": "居处、停留的动词处读chǔ。",
+      "sources": [
+        "jigu"
+      ]
+    },
+    {
+      "poemId": "shi-1",
+      "field": "all",
+      "text": "于嗟",
+      "reading": "xū jiē",
+      "reason": "叹词同吁嗟。",
+      "sources": [
+        "jigu"
+      ]
+    },
+    {
+      "poemId": "shi-2",
+      "field": "all",
+      "text": "相鼠",
+      "reading": "xiàng shǔ",
+      "reason": "相为观察、看看，读xiàng。",
+      "sources": [
+        "xiangshu"
+      ]
+    },
+    {
+      "poemId": "shi-3",
+      "field": "all",
+      "text": "淇奥",
+      "reading": "qí yù",
+      "reason": "奥为水边弯曲处，读yù。",
+      "sources": [
+        "qiao"
+      ]
+    },
+    {
+      "poemId": "shi-3",
+      "field": "all",
+      "text": "咺",
+      "reading": "xuān",
+      "reason": "有威仪的样子，采用本篇注释xuān。",
+      "sources": [
+        "qiao"
+      ]
+    },
+    {
+      "poemId": "shi-3",
+      "field": "all",
+      "text": "会弁",
+      "reading": "kuài biàn",
+      "reason": "会为皮帽缝合处，不是开会。",
+      "sources": [
+        "qiao"
+      ]
+    },
+    {
+      "poemId": "shi-3",
+      "field": "all",
+      "text": "猗重较",
+      "reading": "yǐ chóng jué",
+      "reason": "猗通倚，重较为车厢两重横木，较读jué。",
+      "sources": [
+        "qiao"
+      ]
+    },
+    {
+      "poemId": "shi-4",
+      "field": "all",
+      "text": "靡靡",
+      "reading": "mǐ mǐ",
+      "reason": "行走迟缓、心情颓丧，靡读mǐ。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-5",
+      "field": "all",
+      "text": "为霜",
+      "reading": "wéi shuāng",
+      "reason": "成为霜，为读wéi。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-5",
+      "field": "all",
+      "text": "中坻",
+      "reading": "zhōng chí",
+      "reason": "水中小洲，坻读chí。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-6",
+      "field": "all",
+      "text": "载",
+      "reading": "zài",
+      "reason": "本篇均为语助词，读zài。",
+      "sources": [
+        "qiyue"
+      ]
+    },
+    {
+      "poemId": "shi-6",
+      "field": "all",
+      "text": "公子裳",
+      "reading": "gōng zǐ cháng",
+      "reason": "裳在古诗中单用，标本音cháng。",
+      "sources": [
+        "qiyue"
+      ]
+    },
+    {
+      "poemId": "shi-6",
+      "field": "all",
+      "text": "猗彼女桑",
+      "reading": "yǐ bǐ nǚ sāng",
+      "reason": "猗通掎，牵引；女桑为小桑树。",
+      "sources": [
+        "qiyue"
+      ]
+    },
+    {
+      "poemId": "shi-6",
+      "field": "all",
+      "text": "莎鸡",
+      "reading": "shā jī",
+      "reason": "虫名莎鸡读shā，不同于莎草suō。",
+      "sources": [
+        "qiyue"
+      ]
+    },
+    {
+      "poemId": "shi-6",
+      "field": "all",
+      "text": "为改岁",
+      "reading": "wéi gǎi suì",
+      "reason": "即将改岁，为作是、将的语法义，读wéi。",
+      "sources": [
+        "qiyue"
+      ]
+    },
+    {
+      "poemId": "shi-6",
+      "field": "all",
+      "text": "室处",
+      "reading": "shì chǔ",
+      "reason": "进入室内居住，处为动词。",
+      "sources": [
+        "qiyue"
+      ]
+    },
+    {
+      "poemId": "shi-6",
+      "field": "all",
+      "text": "亨葵",
+      "reading": "pēng kuí",
+      "reason": "亨通烹，煮葵菜。",
+      "sources": [
+        "qiyue"
+      ]
+    },
+    {
+      "poemId": "shi-6",
+      "field": "all",
+      "text": "剥枣",
+      "reading": "pū zǎo",
+      "reason": "据本篇注释通扑，击打枣实；另有按字典本音bō的读法。",
+      "sources": [
+        "qiyue"
+      ]
+    },
+    {
+      "poemId": "shi-6",
+      "field": "all",
+      "text": "为此春酒",
+      "reading": "wéi cǐ chūn jiǔ",
+      "reason": "酿造、做酒，动词为读wéi。",
+      "sources": [
+        "qiyue"
+      ]
+    },
+    {
+      "poemId": "shi-6",
+      "field": "all",
+      "text": "食我农夫",
+      "reading": "sì wǒ nóng fū",
+      "reason": "给农夫吃，使动食读sì。",
+      "sources": [
+        "qiyue"
+      ]
+    },
+    {
+      "poemId": "shi-6",
+      "field": "all",
+      "text": "重穋",
+      "reading": "tóng lù",
+      "reason": "重为晚熟谷物，穋为早熟谷物。",
+      "sources": [
+        "qiyue",
+        "zhong"
+      ]
+    },
+    {
+      "poemId": "shi-6",
+      "field": "all",
+      "text": "场",
+      "reading": "cháng",
+      "reason": "打谷、晒粮的平场，场读cháng。",
+      "sources": [
+        "qiyue"
+      ]
+    },
+    {
+      "poemId": "shi-6",
+      "field": "all",
+      "text": "乘屋",
+      "reading": "chéng wū",
+      "reason": "修盖房屋的动词乘读chéng。",
+      "sources": [
+        "qiyue"
+      ]
+    },
+    {
+      "poemId": "shi-6",
+      "field": "all",
+      "text": "冲冲",
+      "reading": "chōng chōng",
+      "reason": "凿冰声，按现代词典音标注。",
+      "sources": [
+        "qiyue"
+      ]
+    },
+    {
+      "poemId": "shi-6",
+      "field": "all",
+      "text": "称彼",
+      "reading": "chēng bǐ",
+      "reason": "举起酒器，称读chēng。",
+      "sources": [
+        "qiyue"
+      ]
+    },
+    {
+      "poemId": "shi-7",
+      "field": "all",
+      "text": "修能",
+      "reading": "xiū tài",
+      "reason": "能通态，美好的仪态。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-7",
+      "field": "all",
+      "text": "初度",
+      "reading": "chū dù",
+      "reason": "出生时度量，保留度量义dù。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-7",
+      "field": "all",
+      "text": "重之",
+      "reading": "chóng zhī",
+      "reason": "又加上，重复、增益义重读chóng。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-7",
+      "field": "all",
+      "text": "辟芷",
+      "reading": "pì zhǐ",
+      "reason": "幽僻之处的白芷，辟读pì。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-7",
+      "field": "all",
+      "text": "朝搴",
+      "reading": "zhāo qiān",
+      "reason": "清晨采摘，朝读zhāo。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-7",
+      "field": "all",
+      "text": "道夫",
+      "reading": "dǎo fú",
+      "reason": "道通导，夫为指示代词。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-8",
+      "field": "all",
+      "text": "山之阿",
+      "reading": "shān zhī ē",
+      "reason": "山的弯曲处，阿读ē。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-8",
+      "field": "all",
+      "text": "被",
+      "reading": "pī",
+      "reason": "被通披，穿戴义。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-8",
+      "field": "all",
+      "text": "遗所思",
+      "reading": "wèi suǒ sī",
+      "reason": "赠送思念的人，遗读wèi。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-8",
+      "field": "all",
+      "text": "余处",
+      "reading": "yú chǔ",
+      "reason": "我居住，处为动词。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-8",
+      "field": "all",
+      "text": "灵雨",
+      "reading": "líng yǔ",
+      "reason": "神灵之雨，保留常用名词音，不任意改作动词音。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-8",
+      "field": "all",
+      "text": "华予",
+      "reading": "huà yǔ",
+      "reason": "使我荣华、使我美好，华为动词。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-8",
+      "field": "all",
+      "text": "於山间",
+      "reading": "yú shān jiān",
+      "reason": "在山间，介词於读yú。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-8",
+      "field": "all",
+      "text": "葛蔓",
+      "reading": "gé màn",
+      "reason": "植物葛及其藤蔓，葛读gé。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-8",
+      "field": "all",
+      "text": "填填",
+      "reading": "tián tián",
+      "reason": "雷声轰响，按现代字典田音标注。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-8",
+      "field": "all",
+      "text": "毂",
+      "reading": "gǔ",
+      "reason": "车轮中心的圆木，不是车毂以外的轱辘音。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-8",
+      "field": "all",
+      "text": "躐余行",
+      "reading": "liè yú háng",
+      "reason": "军队行列，行读háng。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-8",
+      "field": "all",
+      "text": "玉枹",
+      "reading": "yù fú",
+      "reason": "鼓槌的枹读fú。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-11",
+      "field": "all",
+      "text": "矰缴",
+      "reading": "zēng zhuó",
+      "reason": "系在箭上的丝绳，缴读zhuó。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-14",
+      "field": "all",
+      "text": "园中葵",
+      "reading": "yuán zhōng kuí",
+      "reason": "园内之葵，避免与“中葵”错误分词。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-15",
+      "field": "all",
+      "text": "上邪",
+      "reading": "shàng yé",
+      "reason": "对天呼告的语气词。",
+      "sources": [
+        "shangye"
+      ]
+    },
+    {
+      "poemId": "shi-15",
+      "field": "all",
+      "text": "衰",
+      "reading": "cuī",
+      "reason": "本篇衰绝义的传统注音。",
+      "sources": [
+        "shangye"
+      ]
+    },
+    {
+      "poemId": "shi-15",
+      "field": "all",
+      "text": "为竭",
+      "reading": "wéi jié",
+      "reason": "水枯竭，为读wéi。",
+      "sources": [
+        "shangye"
+      ]
+    },
+    {
+      "poemId": "shi-16",
+      "field": "all",
+      "text": "冢累累",
+      "reading": "zhǒng lěi lěi",
+      "reason": "坟墓接连成串，不是疲累。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-18",
+      "field": "all",
+      "text": "遗我",
+      "reading": "wèi wǒ",
+      "reason": "赠给我，遗读wèi。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-18",
+      "field": "all",
+      "text": "辗转",
+      "reading": "zhǎn zhuǎn",
+      "reason": "辗转词读zhǎn zhuǎn。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-18",
+      "field": "all",
+      "text": "相忆",
+      "reading": "xiāng yì",
+      "reason": "彼此思念，相读xiāng。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-19",
+      "field": "all",
+      "text": "不为薄",
+      "reading": "bù wéi bó",
+      "reason": "不算薄，为读wéi，厚薄的薄读bó。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-19",
+      "field": "all",
+      "text": "夹巷",
+      "reading": "jiā xiàng",
+      "reason": "大道旁边夹杂小巷，夹读jiā。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-21",
+      "field": "all",
+      "text": "欲遗谁",
+      "reading": "yù wèi shuí",
+      "reason": "想要赠给谁，遗读wèi。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-21",
+      "field": "all",
+      "text": "还顾",
+      "reading": "huán gù",
+      "reason": "回头看，归还的还读huán。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-23",
+      "field": "all",
+      "text": "为乐",
+      "reading": "wéi lè",
+      "reason": "寻欢作乐，为读wéi。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-26",
+      "field": "all",
+      "text": "雁行",
+      "reading": "yàn háng",
+      "reason": "像雁排列，行读háng。",
+      "sources": [
+        "haoli"
+      ]
+    },
+    {
+      "poemId": "shi-26",
+      "field": "all",
+      "text": "嗣还",
+      "reading": "sì xuán",
+      "reason": "还通旋，随即。",
+      "sources": [
+        "haoli"
+      ]
+    },
+    {
+      "poemId": "shi-27",
+      "field": "all",
+      "text": "不还",
+      "reading": "bù huán",
+      "reason": "不再回头，还读huán。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-28",
+      "field": "all",
+      "text": "为霜",
+      "reading": "wéi shuāng",
+      "reason": "成为霜，为读wéi。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-29",
+      "field": "all",
+      "text": "少小",
+      "reading": "shào xiǎo",
+      "reason": "年幼的时候，少读shào。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-29",
+      "field": "all",
+      "text": "楛矢",
+      "reading": "hù shǐ",
+      "reason": "用楛木制的箭，楛读hù。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-29",
+      "field": "all",
+      "text": "左的",
+      "reading": "zuǒ dì",
+      "reason": "左边箭靶的中心，的读dì。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-29",
+      "field": "all",
+      "text": "月支",
+      "reading": "yuè zhī",
+      "reason": "箭靶名月支，按词名注音。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-29",
+      "field": "all",
+      "text": "虏骑数",
+      "reading": "lǔ jì shuò",
+      "reason": "骑兵读jì，屡次读shuò。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-29",
+      "field": "all",
+      "text": "国难",
+      "reading": "guó nàn",
+      "reason": "国家危难，难读nàn。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-30",
+      "field": "all",
+      "text": "还国",
+      "reading": "huán guó",
+      "reason": "返回封国，还读huán。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-30",
+      "field": "all",
+      "text": "城阙",
+      "reading": "chéng què",
+      "reason": "城门宫阙，阙读què。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-30",
+      "field": "all",
+      "text": "流潦",
+      "reading": "liú lǎo",
+      "reason": "积水，潦读lǎo。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-30",
+      "field": "all",
+      "text": "欲还",
+      "reading": "yù huán",
+      "reason": "想返回，还读huán。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-30",
+      "field": "all",
+      "text": "何为",
+      "reading": "hé wéi",
+      "reason": "做什么，为为动作义。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-30",
+      "field": "all",
+      "text": "人生处",
+      "reading": "rén shēng chǔ",
+      "reason": "人生处于，处为动词。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-30",
+      "field": "all",
+      "text": "黄发",
+      "reading": "huáng fà",
+      "reason": "老人头发，发读fà。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-34",
+      "field": "all",
+      "text": "荫此",
+      "reading": "yìn cǐ",
+      "reason": "遮蔽大树下的小苗，动词荫读yìn。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-35",
+      "field": "all",
+      "text": "重壤",
+      "reading": "chóng rǎng",
+      "reason": "重重土壤、地下，重读chóng。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-35",
+      "field": "all",
+      "text": "一朝只",
+      "reading": "yī zhāo zhī",
+      "reason": "忽然剩下一只，量词只读zhī。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-35",
+      "field": "all",
+      "text": "重纩",
+      "reading": "chóng kuàng",
+      "reason": "多层丝绵的衣服，重读chóng。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-35",
+      "field": "all",
+      "text": "千载",
+      "reading": "qiān zǎi",
+      "reason": "千年，载读zǎi。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-36",
+      "field": "all",
+      "text": "数晨夕",
+      "reading": "shǔ chén xī",
+      "reason": "一同度过、数着晨夕，数读shǔ。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-36",
+      "field": "all",
+      "text": "邻曲",
+      "reading": "lín qū",
+      "reason": "邻里街曲，曲读qū。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-37",
+      "field": "all",
+      "text": "应尽",
+      "reading": "yīng jìn",
+      "reason": "应当终尽，应读yīng。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-39",
+      "field": "all",
+      "text": "予和",
+      "reading": "yǔ hè",
+      "reason": "与我唱和，和读hè。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-40",
+      "field": "all",
+      "text": "燕丹",
+      "reading": "yān dān",
+      "reason": "燕国太子丹，国名读yān。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-40",
+      "field": "all",
+      "text": "雄发",
+      "reading": "xióng fà",
+      "reason": "怒发，发读fà。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-40",
+      "field": "all",
+      "text": "渐离",
+      "reading": "jiān lí",
+      "reason": "高渐离的专名读音。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-40",
+      "field": "all",
+      "text": "悲筑",
+      "reading": "bēi zhú",
+      "reason": "古代乐器筑，读zhú。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-40",
+      "field": "all",
+      "text": "已没",
+      "reading": "yǐ mò",
+      "reason": "已经死去，没通殁，读mò。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-41",
+      "field": "all",
+      "text": "草木长",
+      "reading": "cǎo mù zhǎng",
+      "reason": "草木生长，长读zhǎng。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-41",
+      "field": "all",
+      "text": "已种",
+      "reading": "yǐ zhòng",
+      "reason": "种植的动作义，种读zhòng。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-41",
+      "field": "all",
+      "text": "周王传",
+      "reading": "zhōu wáng zhuàn",
+      "reason": "记叙周穆王事迹的书，传读zhuàn。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-43",
+      "field": "all",
+      "text": "薄霄",
+      "reading": "bó xiāo",
+      "reason": "迫近云霄，薄读bó。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-43",
+      "field": "all",
+      "text": "渊沈",
+      "reading": "yuān chén",
+      "reason": "沈同沉，读chén。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-43",
+      "field": "all",
+      "text": "处心",
+      "reading": "chǔ xīn",
+      "reason": "安心、处置心绪，处读chǔ。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-43",
+      "field": "all",
+      "text": "无闷",
+      "reading": "wú mèn",
+      "reason": "没有烦闷，闷读mèn。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-44",
+      "field": "all",
+      "text": "还湖",
+      "reading": "huán hú",
+      "reason": "返回湖中，还读huán。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-45",
+      "field": "all",
+      "text": "丈夫",
+      "reading": "zhàng fū",
+      "reason": "古诗男子义，夫标本调fū。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-45",
+      "field": "all",
+      "text": "还家",
+      "reading": "huán jiā",
+      "reason": "回家，还读huán。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-45",
+      "field": "all",
+      "text": "朝出",
+      "reading": "zhāo chū",
+      "reason": "清晨出门，朝读zhāo。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-45",
+      "field": "all",
+      "text": "暮还",
+      "reading": "mù huán",
+      "reason": "傍晚返回，还读huán。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-46",
+      "field": "all",
+      "text": "还望",
+      "reading": "huán wàng",
+      "reason": "回头望，还读huán。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-47",
+      "field": "all",
+      "text": "十二曲",
+      "reading": "shí èr qū",
+      "reason": "栏杆的曲折处，曲读qū。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-51",
+      "field": "all",
+      "text": "飞观",
+      "reading": "fēi guàn",
+      "reason": "高耸楼台，观读guàn。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-51",
+      "field": "all",
+      "text": "层阙",
+      "reading": "céng què",
+      "reason": "宫门，阙读què。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-52",
+      "field": "all",
+      "text": "燕丹",
+      "reading": "yān dān",
+      "reason": "燕国太子，国名燕读yān。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-52",
+      "field": "all",
+      "text": "已没",
+      "reading": "yǐ mò",
+      "reason": "死去，没通殁，读mò。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-54",
+      "field": "all",
+      "text": "和晋陵",
+      "reading": "hè jìn líng",
+      "reason": "酬和诗题，和读hè。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-54",
+      "field": "all",
+      "text": "古调",
+      "reading": "gǔ diào",
+      "reason": "古诗的曲调，调读diào。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-57",
+      "field": "all",
+      "text": "摧为薪",
+      "reading": "cuī wéi xīn",
+      "reason": "成为柴薪，为读wéi。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-57",
+      "field": "all",
+      "text": "鹤发",
+      "reading": "hè fà",
+      "reason": "白发，发读fà。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-61",
+      "field": "all",
+      "text": "楼观",
+      "reading": "lóu guàn",
+      "reason": "楼台建筑的观读guàn。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-61",
+      "field": "all",
+      "text": "烦嚣",
+      "reading": "fán xiāo",
+      "reason": "喧闹，嚣读xiāo。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-62",
+      "field": "all",
+      "text": "兰若",
+      "reading": "lán ruò",
+      "reason": "这里兰与杜若两种香草，不是佛寺。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-63",
+      "field": "all",
+      "text": "扁舟",
+      "reading": "piān zhōu",
+      "reason": "小船，扁读piān。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-63",
+      "field": "all",
+      "text": "还来",
+      "reading": "huán lái",
+      "reason": "拂去又回来，物象返回的还读huán。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-63",
+      "field": "all",
+      "text": "还家",
+      "reading": "huán jiā",
+      "reason": "归家，还读huán。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-65",
+      "field": "all",
+      "text": "还寝",
+      "reading": "huán qǐn",
+      "reason": "回去就寝，还读huán。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-69",
+      "field": "all",
+      "text": "不还",
+      "reading": "bù huán",
+      "reason": "不返回，还读huán。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-71",
+      "field": "all",
+      "text": "角弓",
+      "reading": "jiǎo gōng",
+      "reason": "用兽角装饰的弓，角读jiǎo。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-71",
+      "field": "all",
+      "text": "还归",
+      "reading": "huán guī",
+      "reason": "返回，读huán。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-72",
+      "field": "all",
+      "text": "楚塞",
+      "reading": "chǔ sài",
+      "reason": "楚地边塞，塞读sài。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-74",
+      "field": "all",
+      "text": "系马",
+      "reading": "jì mǎ",
+      "reason": "拴系马匹，系按现代动作义读jì。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-75",
+      "field": "all",
+      "text": "朝雨",
+      "reading": "zhāo yǔ",
+      "reason": "早晨的雨，朝读zhāo。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-85",
+      "field": "all",
+      "text": "朝如",
+      "reading": "zhāo rú",
+      "reason": "早晨如青丝，朝读zhāo。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-85",
+      "field": "all",
+      "text": "且为乐",
+      "reading": "qiě wéi lè",
+      "reason": "作乐、尽欢，为读wéi。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-85",
+      "field": "all",
+      "text": "将进酒",
+      "reading": "qiāng jìn jiǔ",
+      "reason": "将作请、劝义。",
+      "sources": [
+        "jinjiu"
+      ]
+    },
+    {
+      "poemId": "shi-85",
+      "field": "all",
+      "text": "平乐",
+      "reading": "píng lè",
+      "reason": "平乐观为宫观名，乐读lè。",
+      "sources": [
+        "jinjiu"
+      ]
+    },
+    {
+      "poemId": "shi-87",
+      "field": "all",
+      "text": "无所为",
+      "reading": "wú suǒ wéi",
+      "reason": "没有作为、无事可做，动词为读wéi。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-87",
+      "field": "all",
+      "text": "应须",
+      "reading": "yīng xū",
+      "reason": "应当需要，应读yīng。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-87",
+      "field": "all",
+      "text": "徒为尔",
+      "reading": "tú wéi ěr",
+      "reason": "徒然如此，为读wéi。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-88",
+      "field": "all",
+      "text": "汉将",
+      "reading": "hàn jiàng",
+      "reason": "汉朝将领，将读jiàng。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-88",
+      "field": "all",
+      "text": "塞草",
+      "reading": "sài cǎo",
+      "reason": "边塞草木，塞读sài。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-88",
+      "field": "all",
+      "text": "应啼",
+      "reading": "yīng tí",
+      "reason": "应当哭泣，应读yīng。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-90",
+      "field": "all",
+      "text": "空人心",
+      "reading": "kòng rén xīn",
+      "reason": "使人的心空净，空作动词，读kòng。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-92",
+      "field": "all",
+      "text": "濩落",
+      "reading": "huò luò",
+      "reason": "廓落、空阔的样子，濩读huò。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-92",
+      "field": "all",
+      "text": "尘埃没",
+      "reading": "chén āi mò",
+      "reason": "被尘埃埋没，没读mò。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-92",
+      "field": "all",
+      "text": "嵽嵲",
+      "reading": "dié niè",
+      "reason": "形容山高，嵽读dié。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-92",
+      "field": "all",
+      "text": "城阙",
+      "reading": "chéng què",
+      "reason": "宫阙，阙读què。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-92",
+      "field": "all",
+      "text": "煖客",
+      "reading": "nuǎn kè",
+      "reason": "煖通暖，读nuǎn。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-92",
+      "field": "all",
+      "text": "崆峒",
+      "reading": "kōng tóng",
+      "reason": "这里指崆峒山，传统专名读tóng。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-92",
+      "field": "all",
+      "text": "舍一哀",
+      "reading": "shě yī āi",
+      "reason": "放下自己丧子的哀痛，舍读shě。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-92",
+      "field": "all",
+      "text": "为人父",
+      "reading": "wéi rén fù",
+      "reason": "做人父亲，身份义为读wéi。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-94",
+      "field": "all",
+      "text": "蜀相",
+      "reading": "shǔ xiàng",
+      "reason": "蜀国丞相，官职相读xiàng。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-96",
+      "field": "all",
+      "text": "漫卷",
+      "reading": "màn juǎn",
+      "reason": "随意卷起，动作义卷读juǎn。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-97",
+      "field": "all",
+      "text": "应老",
+      "reading": "yīng lǎo",
+      "reason": "自问应因衰老退休，应读yīng。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-98",
+      "field": "all",
+      "text": "秋兴",
+      "reading": "qiū xìng",
+      "reason": "秋日感兴，兴致义读xìng。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-98",
+      "field": "all",
+      "text": "一系",
+      "reading": "yī xì",
+      "reason": "系联故园心思，按诗句常用系联义读xì。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-102",
+      "field": "all",
+      "text": "为人鞿",
+      "reading": "wéi rén jī",
+      "reason": "做受人束缚的人，为读wéi。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-104",
+      "field": "all",
+      "text": "春朝",
+      "reading": "chūn zhāo",
+      "reason": "春日早晨，朝读zhāo。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-109",
+      "field": "all",
+      "text": "没马蹄",
+      "reading": "mò mǎ tí",
+      "reason": "草遮没马蹄，没读mò。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-110",
+      "field": "all",
+      "text": "不可数",
+      "reading": "bù kě shǔ",
+      "reason": "不能计数，数读shǔ。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-110",
+      "field": "all",
+      "text": "不着",
+      "reading": "bù zhuó",
+      "reason": "不穿，着为穿着义，读zhuó。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-110",
+      "field": "all",
+      "text": "钿璎累累",
+      "reading": "diàn yīng léi léi",
+      "reason": "宝饰接连成串的累累读léi。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-110",
+      "field": "all",
+      "text": "乐悬",
+      "reading": "yuè xuán",
+      "reason": "悬挂的乐器，乐读yuè。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-110",
+      "field": "all",
+      "text": "散序",
+      "reading": "sǎn xù",
+      "reason": "乐曲开头散板部分，散读sǎn。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-110",
+      "field": "all",
+      "text": "纤纤",
+      "reading": "xiān xiān",
+      "reason": "形容手指细长，纤读xiān。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-110",
+      "field": "all",
+      "text": "秪应",
+      "reading": "zhī yīng",
+      "reason": "秪同只，应为应当义。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-110",
+      "field": "all",
+      "text": "闲闷",
+      "reading": "xián mèn",
+      "reason": "闲居烦闷，闷读mèn。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-110",
+      "field": "all",
+      "text": "朝钟暮角",
+      "reading": "zhāo zhōng mù jiǎo",
+      "reason": "早钟晚号，朝读zhāo，号角读jiǎo。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-110",
+      "field": "all",
+      "text": "碧间红",
+      "reading": "bì jiàn hóng",
+      "reason": "碧色和红色相间，间读jiàn。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-110",
+      "field": "all",
+      "text": "似着",
+      "reading": "sì zhuó",
+      "reason": "好像用丹青涂绘，着读zhuó。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-110",
+      "field": "all",
+      "text": "曲爱",
+      "reading": "qū ài",
+      "reason": "特别偏爱，曲读qū。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-110",
+      "field": "all",
+      "text": "大都",
+      "reading": "dà dōu",
+      "reason": "大多、总的来说，都读dōu。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-110",
+      "field": "all",
+      "text": "只在人",
+      "reading": "zhǐ zài rén",
+      "reason": "只是在于人，只读zhǐ。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-111",
+      "field": "all",
+      "text": "欸乃",
+      "reading": "ǎi nǎi",
+      "reason": "摇橹声，词读ǎi nǎi。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-112",
+      "field": "all",
+      "text": "泥他",
+      "reading": "nì tā",
+      "reason": "软语央求，泥读nì。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-112",
+      "field": "all",
+      "text": "行看",
+      "reading": "xíng kàn",
+      "reason": "将要看尽，行读xíng。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-113",
+      "field": "all",
+      "text": "幢幢",
+      "reading": "chuáng chuáng",
+      "reason": "灯影摇曳，幢读chuáng。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-118",
+      "field": "all",
+      "text": "乐藉",
+      "reading": "yuè jí",
+      "reason": "乐工名籍，乐读yuè，藉通籍。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-118",
+      "field": "all",
+      "text": "宣城藉",
+      "reading": "xuān chéng jí",
+      "reason": "名籍的藉读jí。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-118",
+      "field": "all",
+      "text": "重睹",
+      "reading": "chóng dǔ",
+      "reason": "再次看到，重读chóng。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-118",
+      "field": "all",
+      "text": "君为",
+      "reading": "jūn wéi",
+      "reason": "你是豫章美女，为读wéi。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-118",
+      "field": "all",
+      "text": "已为疏",
+      "reading": "yǐ wéi shū",
+      "reason": "已经算疏远，为读wéi。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-118",
+      "field": "all",
+      "text": "载以",
+      "reading": "zài yǐ",
+      "reason": "用车承载，载读zài。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-118",
+      "field": "all",
+      "text": "重相见",
+      "reading": "chóng xiāng jiàn",
+      "reason": "再次相见，重读chóng。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-118",
+      "field": "all",
+      "text": "为当垆",
+      "reading": "wéi dāng lú",
+      "reason": "作为卖酒女，为读wéi，掌管店务的当读dāng。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-120",
+      "field": "all",
+      "text": "应是",
+      "reading": "yīng shì",
+      "reason": "应当是，应读yīng。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-120",
+      "field": "all",
+      "text": "重问",
+      "reading": "chóng wèn",
+      "reason": "再次问，重读chóng。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-121",
+      "field": "all",
+      "text": "扁舟",
+      "reading": "piān zhōu",
+      "reason": "小船，扁读piān。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-123",
+      "field": "all",
+      "text": "梦为",
+      "reading": "mèng wéi",
+      "reason": "梦成为远别之梦，为读wéi。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-124",
+      "field": "all",
+      "text": "韩掾少",
+      "reading": "hán yuàn shào",
+      "reason": "韩寿年少，少读shào。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-130",
+      "field": "all",
+      "text": "着尽",
+      "reading": "zhuó jìn",
+      "reason": "穿尽汉宫衣，着读zhuó。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-133",
+      "field": "all",
+      "text": "黮暗",
+      "reading": "dǎn àn",
+      "reason": "昏暗不明，黮读dǎn。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-134",
+      "field": "all",
+      "text": "和子由",
+      "reading": "hè zǐ yóu",
+      "reason": "酬和子由，和读hè。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-134",
+      "field": "all",
+      "text": "指爪",
+      "reading": "zhǐ zhǎo",
+      "reason": "鸟爪，爪按书面词读zhǎo。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-134",
+      "field": "all",
+      "text": "东西",
+      "reading": "dōng xī",
+      "reason": "方位东西，西不读轻声。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-135",
+      "field": "all",
+      "text": "卷地",
+      "reading": "juǎn dì",
+      "reason": "风卷着地面，卷读juǎn。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-137",
+      "field": "all",
+      "text": "参横斗转",
+      "reading": "shēn héng dǒu zhuǎn",
+      "reason": "参星、北斗，参读shēn，斗读dǒu。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-138",
+      "field": "all",
+      "text": "公家",
+      "reading": "gōng jiā",
+      "reason": "官府，家读jiā。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-138",
+      "field": "all",
+      "text": "东西",
+      "reading": "dōng xī",
+      "reason": "阁上东西两边，西不读轻声。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-141",
+      "field": "all",
+      "text": "曾几",
+      "reading": "zēng jī",
+      "reason": "作者名采用统编语文教材读法。",
+      "sources": [
+        "zengji"
+      ]
+    },
+    {
+      "poemId": "shi-144",
+      "field": "all",
+      "text": "哦诗",
+      "reading": "é shī",
+      "reason": "吟哦诗歌，哦读é。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-150",
+      "field": "all",
+      "text": "为",
+      "reading": "wéi",
+      "reason": "本篇各处均为化作、成为、作为义，为读wéi。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-150",
+      "field": "all",
+      "text": "张良椎",
+      "reading": "zhāng liáng chuí",
+      "reason": "张良投击的铁椎，椎同锤，读chuí。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-150",
+      "field": "all",
+      "text": "沮洳",
+      "reading": "jù rù",
+      "reason": "低湿之地，沮读jù。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-150",
+      "field": "all",
+      "text": "缪巧",
+      "reading": "miù qiǎo",
+      "reason": "谬误巧计的缪通谬，读miù。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-155",
+      "field": "all",
+      "text": "只等闲",
+      "reading": "zhǐ děng xián",
+      "reason": "只当作平常，只读zhǐ。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-160",
+      "field": "all",
+      "text": "只带",
+      "reading": "zhǐ dài",
+      "reason": "只带着，只读zhǐ。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-160",
+      "field": "all",
+      "text": "星斗",
+      "reading": "xīng dǒu",
+      "reason": "星空的斗为北斗的斗，读dǒu。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-162",
+      "field": "all",
+      "text": "海子",
+      "reading": "hǎi zǐ",
+      "reason": "作者笔名，不按普通名词后缀轻声处理。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "ci-2",
+      "field": "all",
+      "text": "参辰",
+      "reading": "shēn chén",
+      "reason": "参星与辰星，参读shēn。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "ci-2",
+      "field": "all",
+      "text": "北斗",
+      "reading": "běi dǒu",
+      "reason": "星名，斗读dǒu。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "ci-8",
+      "field": "all",
+      "text": "朝来",
+      "reading": "zhāo lái",
+      "reason": "早晨以来，朝读zhāo。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "ci-8",
+      "field": "all",
+      "text": "几时重",
+      "reading": "jǐ shí chóng",
+      "reason": "几时重逢，重读chóng。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "ci-9",
+      "field": "all",
+      "text": "都会",
+      "reading": "dū huì",
+      "reason": "大都市，都读dū。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "ci-9",
+      "field": "all",
+      "text": "卷霜雪",
+      "reading": "juǎn shuāng xuě",
+      "reason": "波涛卷起，卷读juǎn。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "ci-9",
+      "field": "all",
+      "text": "重湖",
+      "reading": "chóng hú",
+      "reason": "里外两重湖面，重读chóng。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "ci-12",
+      "field": "all",
+      "text": "踏莎行",
+      "reading": "tà suō xíng",
+      "reason": "词牌名，莎读suō。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "ci-14",
+      "field": "all",
+      "text": "应不识",
+      "reading": "yīng bù shí",
+      "reason": "应当不认识，应读yīng。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "ci-15",
+      "field": "all",
+      "text": "千骑",
+      "reading": "qiān jì",
+      "reason": "千名骑兵，骑按古诗名词用法读jì。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "ci-15",
+      "field": "all",
+      "text": "卷平冈",
+      "reading": "juǎn píng gāng",
+      "reason": "席卷山冈，卷读juǎn。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "ci-18",
+      "field": "all",
+      "text": "拚却",
+      "reading": "pàn què",
+      "reason": "甘愿舍弃，拚读pàn。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "ci-22",
+      "field": "all",
+      "text": "应折",
+      "reading": "yīng zhé",
+      "reason": "应当折柳，应读yīng。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "ci-27",
+      "field": "all",
+      "text": "着风",
+      "reading": "zhuó fēng",
+      "reason": "更遭受风雨，着读zhuó。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "ci-28",
+      "field": "all",
+      "text": "摸鱼儿",
+      "reading": "mō yú ér",
+      "reason": "词牌名的儿单独标音，不作儿化后缀。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "ci-28",
+      "field": "all",
+      "text": "更能",
+      "reading": "gēng néng",
+      "reason": "还能经受几番风雨，更读gēng。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "ci-28",
+      "field": "all",
+      "text": "长门",
+      "reading": "cháng mén",
+      "reason": "汉宫名，长读cháng。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "ci-29",
+      "field": "all",
+      "text": "亡赖",
+      "reading": "wú lài",
+      "reason": "亡通无，顽皮淘气，读wú。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "ci-29",
+      "field": "all",
+      "text": "剥莲蓬",
+      "reading": "bāo lián péng",
+      "reason": "口语动作剥开莲蓬，剥读bāo。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "ci-31",
+      "field": "all",
+      "text": "载雪",
+      "reading": "zài xuě",
+      "reason": "载着雪，载读zài。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "ci-32",
+      "field": "all",
+      "text": "重觅",
+      "reading": "chóng mì",
+      "reason": "重新寻觅，重读chóng。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "ci-33",
+      "field": "all",
+      "text": "摸鱼儿",
+      "reading": "mō yú ér",
+      "reason": "词牌名的儿单独标音。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "ci-33",
+      "field": "all",
+      "text": "为识",
+      "reading": "wéi zhì",
+      "reason": "作为标记，识通志读zhì。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "ci-33",
+      "field": "all",
+      "text": "多为赋诗",
+      "reading": "duō wèi fù shī",
+      "reason": "多为此事赋诗，为读wèi。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "ci-33",
+      "field": "all",
+      "text": "为留待",
+      "reading": "wèi liú dài",
+      "reason": "为了留待，为读wèi。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "ci-36",
+      "field": "all",
+      "text": "成吉思汗",
+      "reading": "chéng jí sī hán",
+      "reason": "专名的汗读hán。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "ci-36",
+      "field": "all",
+      "text": "只识",
+      "reading": "zhǐ shí",
+      "reason": "只懂得，只读zhǐ。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "ci-36",
+      "field": "all",
+      "text": "数风流",
+      "reading": "shǔ fēng liú",
+      "reason": "数说、列举，数读shǔ。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "ci-37",
+      "field": "all",
+      "text": "应无恙",
+      "reading": "yīng wú yàng",
+      "reason": "应当安好，应读yīng。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "ci-38",
+      "field": "all",
+      "text": "重上",
+      "reading": "chóng shàng",
+      "reason": "再次登上，重读chóng。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "ci-38",
+      "field": "all",
+      "text": "凯歌还",
+      "reading": "kǎi gē huán",
+      "reason": "凯旋归来，还读huán。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-17",
+      "field": "all",
+      "text": "当泣",
+      "reading": "dàng qì",
+      "reason": "当作、代替哭泣，当读dàng。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-17",
+      "field": "all",
+      "text": "当归",
+      "reading": "dàng guī",
+      "reason": "代替归乡，当读dàng，不是药材名。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-18",
+      "field": "all",
+      "text": "饮马",
+      "reading": "yìn mǎ",
+      "reason": "使马饮水，饮为使动义读yìn。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-18",
+      "field": "all",
+      "text": "我傍",
+      "reading": "wǒ páng",
+      "reason": "我的身旁，傍同旁，读páng。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-18",
+      "field": "all",
+      "text": "长相忆",
+      "reading": "cháng xiāng yì",
+      "reason": "长久思念，不是生长的长。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-28",
+      "field": "all",
+      "text": "燕歌行",
+      "reading": "yān gē xíng",
+      "reason": "古乐府题指燕地，燕读yān。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-30",
+      "field": "all",
+      "text": "间白黑",
+      "reading": "jiàn bái hēi",
+      "reason": "挑拨是非，间读jiàn。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-30",
+      "field": "all",
+      "text": "分日亲",
+      "reading": "fèn rì qīn",
+      "reason": "情分日益亲密，分读fèn。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-31",
+      "field": "all",
+      "text": "薄帷",
+      "reading": "bó wéi",
+      "reason": "薄帷幕，书面词薄读bó。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-33",
+      "field": "all",
+      "text": "燕市",
+      "reading": "yān shì",
+      "reason": "燕国的街市，燕读yān。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-33",
+      "field": "all",
+      "text": "和渐离",
+      "reading": "hè jiān lí",
+      "reason": "唱和高渐离，和读hè，渐读jiān。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-35",
+      "field": "all",
+      "text": "衾裳",
+      "reading": "qīn cháng",
+      "reason": "指灵筵上的被裳，裳单用读cháng。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-35",
+      "field": "all",
+      "text": "强就车",
+      "reading": "qiǎng jiù chē",
+      "reason": "勉强登车，强读qiǎng。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-38",
+      "field": "all",
+      "text": "相与还",
+      "reading": "xiāng yǔ huán",
+      "reason": "一起归还，读huán。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-41",
+      "field": "all",
+      "text": "时还",
+      "reading": "shí huán",
+      "reason": "有时归来读书，还按返回义读huán。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-61",
+      "field": "all",
+      "text": "天台",
+      "reading": "tiān tāi",
+      "reason": "浙江天台山的专名，台读tāi。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-88",
+      "field": "all",
+      "text": "燕歌行",
+      "reading": "yān gē xíng",
+      "reason": "古乐府题，燕读yān。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-103",
+      "field": "all",
+      "text": "昵昵",
+      "reading": "nì nì",
+      "reason": "亲密柔和声，昵读nì。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-110",
+      "field": "all",
+      "text": "纤纤",
+      "reading": "xiān xiān",
+      "reason": "手指细长，两个纤均读xiān。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-117",
+      "field": "all",
+      "text": "太华",
+      "reading": "tài huà",
+      "reason": "华山，华读huà。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-118",
+      "field": "all",
+      "text": "塞管",
+      "reading": "sài guǎn",
+      "reason": "边塞的管乐器，塞读sài。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-124",
+      "field": "all",
+      "text": "宓妃",
+      "reading": "fú fēi",
+      "reason": "伏羲之女洛神，宓按专名读fú。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-126",
+      "field": "all",
+      "text": "野兴",
+      "reading": "yě xìng",
+      "reason": "野游兴致，兴读xìng。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-130",
+      "field": "all",
+      "text": "塞南",
+      "reading": "sài nán",
+      "reason": "塞外以南，塞读sài。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-133",
+      "field": "all",
+      "text": "所传",
+      "reading": "suǒ chuán",
+      "reason": "所传承、所流传，传读chuán。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-137",
+      "field": "all",
+      "text": "空余",
+      "reading": "kōng yú",
+      "reason": "徒然剩下，空为副词读kōng。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-137",
+      "field": "all",
+      "text": "冠平生",
+      "reading": "guàn píng shēng",
+      "reason": "胜过平生，冠为动词读guàn。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-143",
+      "field": "all",
+      "text": "多难",
+      "reading": "duō nàn",
+      "reason": "多有灾难，难读nàn。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-144",
+      "field": "all",
+      "text": "兴来",
+      "reading": "xìng lái",
+      "reason": "兴致来时，兴读xìng。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-145",
+      "field": "all",
+      "text": "斜行",
+      "reading": "xié háng",
+      "reason": "斜行的草书行列，行读háng。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-150",
+      "field": "all",
+      "text": "传车",
+      "reading": "zhuàn chē",
+      "reason": "古代驿站专用的车辆，传读zhuàn。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "ci-7",
+      "field": "all",
+      "text": "鸡塞",
+      "reading": "jī sài",
+      "reason": "鸡鹿塞的省称，塞读sài。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "ci-16",
+      "field": "all",
+      "text": "同行",
+      "reading": "tóng xíng",
+      "reason": "一起同行的人，行读xíng。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "ci-16",
+      "field": "all",
+      "text": "徐行",
+      "reading": "xú xíng",
+      "reason": "慢行，行读xíng。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "ci-17",
+      "field": "all",
+      "text": "行人",
+      "reading": "xíng rén",
+      "reason": "行路之人，行读xíng。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "ci-30",
+      "field": "all",
+      "text": "的卢",
+      "reading": "dí lú",
+      "reason": "名马的卢，的读dí。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "ci-33",
+      "field": "all",
+      "text": "直教",
+      "reading": "zhí jiào",
+      "reason": "使令之教按现代普通话读jiào。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-6",
+      "field": "all",
+      "text": "于貉",
+      "reading": "yú mà",
+      "reason": "采用通祃、田猎祭祀的教材释读；另有捕貉hé的解释。",
+      "sources": [
+        "qiyue-tup",
+        "qiyue"
+      ]
+    },
+    {
+      "poemId": "shi-28",
+      "field": "all",
+      "text": "慊慊",
+      "reading": "qiàn qiàn",
+      "reason": "心中不满足、忧愁的样子，按本篇通行注音。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-91",
+      "field": "all",
+      "text": "夫如何",
+      "reading": "fú rú hé",
+      "reason": "句中语气词夫读fú。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-117",
+      "field": "all",
+      "text": "赴阙",
+      "reading": "fù què",
+      "reason": "赴朝廷宫阙，阙读què。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "shi-30",
+      "field": "all",
+      "text": "丈夫",
+      "reading": "zhàng fū",
+      "reason": "志在四海的男子，夫标本调fū。",
+      "sources": [
+        "dictionary"
+      ]
+    },
+    {
+      "poemId": "ci-37",
+      "field": "all",
+      "text": "如斯夫",
+      "reading": "rú sī fú",
+      "reason": "句末感叹语气词夫读fú。",
+      "sources": [
+        "dictionary"
+      ]
+    }
+  ]
+}

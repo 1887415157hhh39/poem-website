@@ -817,6 +817,106 @@ main {
   font-size: 13px;
   color: var(--muted);
 }
+.reader-pinyin-control {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.reader-pinyin-control > span {
+  font-size: 13px;
+  color: var(--muted);
+}
+.pinyin-toggle {
+  font-size: 14px;
+  padding: 9px 14px;
+  min-height: 42px;
+  white-space: nowrap;
+}
+.reader-page .pinyin-toggle[aria-pressed="true"] {
+  background: var(--green);
+  color: var(--paper);
+  border-color: var(--green);
+}
+.pinyin-text {
+  white-space: normal;
+  overflow-wrap: anywhere;
+  letter-spacing: 0;
+}
+.pinyin-text ruby {
+  ruby-position: over;
+  ruby-align: center;
+}
+.pinyin-text rt {
+  font:
+    500 clamp(12px, 0.45em, 16px)/1.4 "WenGu Sans",
+    "Microsoft YaHei",
+    sans-serif;
+  color: #52665a;
+  letter-spacing: 0;
+  padding: 0 0.16em;
+}
+.pinyin-text rp {
+  display: none;
+}
+.with-pinyin .reader-heading h1 {
+  line-height: 2.1;
+}
+.with-pinyin .reader-heading > div {
+  min-width: 0;
+}
+.with-pinyin .reader-heading p {
+  line-height: 2.6;
+}
+.with-pinyin .poem-lines {
+  line-height: 3.4;
+}
+.with-pinyin .preface p {
+  line-height: 3.2;
+}
+.pinyin-explanation {
+  margin: 0 8px 20px;
+  padding: 12px 16px;
+  background: var(--sage);
+  font-size: 13px;
+  line-height: 1.9;
+}
+.pinyin-explanation summary {
+  cursor: pointer;
+  color: var(--green);
+}
+.pinyin-explanation p {
+  margin-top: 10px;
+  max-width: 850px;
+}
+.pinyin-explanation a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  margin-left: 8px;
+}
+.pinyin-explanation a svg {
+  vertical-align: middle;
+}
+@media (max-width: 760px) {
+  .reader-pinyin-control {
+    justify-content: flex-start;
+    gap: 12px;
+  }
+  .with-pinyin .reader-heading h1 {
+    font-size: 30px;
+  }
+  .with-pinyin .reader-heading {
+    align-items: flex-start;
+  }
+  .with-pinyin .poem-lines {
+    padding-inline: 0;
+    line-height: 3.6;
+  }
+  .with-pinyin .masked-line {
+    padding-inline: 4px;
+  }
+}
 .preface {
   background: #ecefe5;
   margin: 26px 8px;
