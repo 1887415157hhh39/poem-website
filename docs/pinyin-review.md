@@ -35,4 +35,6 @@ npm run test:sites
 
 独立Playwright浏览器已验证：默认关闭、开关、刷新记住选择、同字不同音、遮字/首字/揭晓/重新遮住；在320、390、834、1440像素宽度分别打开10篇包含长题名、长诗、小序和现代诗的作品，无水平溢出。古诗桌面和现代诗手机页axe WCAG A/AA扫描0项违规，无未捕获页面异常。截图：`docs/design/pinyin-desktop.png`和`docs/design/pinyin-mobile.png`。
 
+已发布至[温故](https://1887415157hhh39.github.io/poem-website/)，代码版本`b48281f08ba14ebe0865bddedb9f293f7049632b`，[GitHub Pages发布流程](https://github.com/1887415157hhh39/poem-website/actions/runs/38866105791)成功。独立浏览器在正式网址验证了拼音开关、“将进酒”qiāng jìn jiǔ、“淇奥”qí yù及“岸呵”àn a；首字模式只显示可见字的拼音，390像素手机页面无水平溢出，页面异常为0。
+
 依赖许可证：[pinyin-pro MIT](https://github.com/zh-lx/pinyin-pro)、[词典数据包 ISC](https://github.com/chinese-data/pinyin-pro-data)。本项目保留的固定读音数据与修订原因便于独立检查，不把自动转换等同于权威审音。
