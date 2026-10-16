@@ -8,6 +8,7 @@ import {
   XCircle,
   Eye,
   ArrowLeft,
+  Notebook,
 } from "@phosphor-icons/react";
 import { gradeAnswer, makeQuestions, shuffle } from "../lib/study.mjs";
 import { SourceLink } from "./Reader.jsx";
@@ -30,7 +31,15 @@ function AnswerDiff({ answer, expected }) {
     </p>
   );
 }
-export function Trainer({ poems, state, onAttempt, context, onRead, onDone }) {
+export function Trainer({
+  poems,
+  state,
+  onAttempt,
+  context,
+  onRead,
+  onDone,
+  onMistakes,
+}) {
   const [mode, setMode] = useState("next"),
     [scope, setScope] = useState("all"),
     [seconds, setSeconds] = useState(10),
@@ -46,9 +55,24 @@ export function Trainer({ poems, state, onAttempt, context, onRead, onDone }) {
     [error, setError] = useState("");
   const startAt = useRef(0),
     locked = useRef(false),
-    inputRef = useRef(null);
+    inputRef = useRef(null),
+    recallRef = useRef(null),
+    phaseRef = useRef(null);
   const q = round?.questions[index];
   const poem = q ? poems.find((p) => p.id === q.poemId) : null;
+  useEffect(() => {
+    if (!round) return;
+    const frame = requestAnimationFrame(() => {
+      const target =
+        phase === "answering"
+          ? answerMode === "type"
+            ? inputRef.current
+            : recallRef.current
+          : phaseRef.current;
+      target?.focus({ preventScroll: true });
+    });
+    return () => cancelAnimationFrame(frame);
+  }, [round, index, phase, answerMode]);
   function start() {
     let pool =
       context?.questions ||
@@ -69,6 +93,8 @@ export function Trainer({ poems, state, onAttempt, context, onRead, onDone }) {
     setIndex(0);
     setResults([]);
     resetQuestion();
+    setError("");
+    window.scrollTo(0, 0);
   }
   function resetQuestion() {
     setAnswer("");
@@ -116,7 +142,21 @@ export function Trainer({ poems, state, onAttempt, context, onRead, onDone }) {
   useEffect(() => {
     if (!q || answerMode !== "recall" || phase !== "answering") return;
     const key = (e) => {
-      if (e.code === "Space" && e.target === document.body) {
+      const target = e.target;
+      const interactive =
+        target instanceof Element &&
+        target.closest(
+          "button, input, textarea, select, a, summary, [contenteditable='true']",
+        );
+      if (
+        e.code === "Space" &&
+        !e.repeat &&
+        !e.isComposing &&
+        !e.altKey &&
+        !e.ctrlKey &&
+        !e.metaKey &&
+        (!interactive || target.closest(".recall-button"))
+      ) {
         e.preventDefault();
         setElapsed(performance.now() - startAt.current);
         setPhase("recalled");
@@ -132,6 +172,7 @@ export function Trainer({ poems, state, onAttempt, context, onRead, onDone }) {
     }
     setIndex(index + 1);
     resetQuestion();
+    window.scrollTo(0, 0);
   }
   const source = context?.poemId
     ? poems.find((p) => p.id === context.poemId)
@@ -153,6 +194,31 @@ export function Trainer({ poems, state, onAttempt, context, onRead, onDone }) {
           </div>
           <Lightning size={42} weight="thin" />
         </div>
+        <section className="training-launch" aria-label="本轮设置摘要">
+          <div>
+            <span className="eyebrow">本轮练习</span>
+            <p>
+              {context?.questions
+                ? "错句专项"
+                : source
+                  ? `《${source.title}》`
+                  : scope === "learned"
+                    ? "已学篇目"
+                    : "全部篇目"}{" "}
+              <span>·</span> {state.settings.roundSize}题 <span>·</span>{" "}
+              {seconds ? `每题${seconds}秒` : "不限时"} <span>·</span>{" "}
+              {answerMode === "recall" ? "抢答自评" : "输入判分"}
+            </p>
+          </div>
+          <button className="button" onClick={start}>
+            开始这一轮 <ArrowRight size={20} />
+          </button>
+        </section>
+        {error && (
+          <p className="notice error" role="alert">
+            {error}
+          </p>
+        )}
         <section className="training-setup">
           <div>
             <h2>安排一轮练习</h2>
@@ -225,14 +291,6 @@ export function Trainer({ poems, state, onAttempt, context, onRead, onDone }) {
                 ))}
               </div>
             </fieldset>
-            {error && (
-              <p className="notice error" role="alert">
-                {error}
-              </p>
-            )}
-            <button className="button" onClick={start}>
-              开始这一轮 <ArrowRight size={20} />
-            </button>
           </div>
           <aside className="training-note">
             <Timer size={42} weight="thin" />
@@ -251,9 +309,11 @@ export function Trainer({ poems, state, onAttempt, context, onRead, onDone }) {
   if (phase === "summary") {
     const correct = results.filter((r) => r.correct).length;
     return (
-      <div className="round-summary">
+      <div className="round-summary" ref={phaseRef} tabIndex={-1}>
         <CheckCircle size={56} weight="thin" />
-        <div className="eyebrow">本轮结束</div>
+        <div className="eyebrow">
+          本轮结束 · 已完成{results.length}/{round.questions.length}题
+        </div>
         <h1>每次回想，都算积累。</h1>
         <div className="summary-stats">
           <div>
@@ -288,12 +348,15 @@ export function Trainer({ poems, state, onAttempt, context, onRead, onDone }) {
             : "这一轮都答对了，继续保持。"}
         </p>
         <div className="button-row">
+          {results.length > correct && (
+            <button className="button" onClick={onMistakes}>
+              <Notebook size={19} />
+              去错句复习
+            </button>
+          )}
           <button
-            className="button"
-            onClick={() => {
-              setRound(null);
-              setError("");
-            }}
+            className={`button ${results.length > correct ? "secondary" : ""}`}
+            onClick={start}
           >
             再练一轮 <ArrowCounterClockwise size={18} />
           </button>
@@ -310,7 +373,9 @@ export function Trainer({ poems, state, onAttempt, context, onRead, onDone }) {
         <button
           className="text-button"
           onClick={() => {
-            setRound(null);
+            locked.current = true;
+            if (results.length) setPhase("summary");
+            else setRound(null);
             setError("");
           }}
         >
@@ -318,17 +383,53 @@ export function Trainer({ poems, state, onAttempt, context, onRead, onDone }) {
           结束本轮
         </button>
         <span>
-          第{index + 1}题 / 共{round.questions.length}题
+          第{index + 1}题 / 共{round.questions.length}题 · 已完成
+          {results.length}题
         </span>
         <span>{answerMode === "recall" ? "回忆抢答" : "输入作答"}</span>
       </div>
-      <div className="quiz-progress">
+      <div
+        className="quiz-progress"
+        role="progressbar"
+        aria-label="本轮已完成题目"
+        aria-valuemin={0}
+        aria-valuemax={round.questions.length}
+        aria-valuenow={results.length}
+      >
         <span
-          style={{ width: `${((index + 1) / round.questions.length) * 100}%` }}
+          style={{
+            width: `${(results.length / round.questions.length) * 100}%`,
+          }}
         />
       </div>
+      <ol className="round-markers" aria-label="本轮作答情况">
+        {round.questions.map((question, i) => (
+          <li
+            key={question.id}
+            className={`${i === index ? "current" : ""} ${results[i] ? (results[i].correct ? "correct" : "incorrect") : ""}`}
+            aria-label={`第${i + 1}题${results[i] ? (results[i].correct ? "，答对" : "，待巩固") : i === index ? "，正在作答" : "，未作答"}`}
+          >
+            {results[i] ? (
+              results[i].correct ? (
+                <CheckCircle size={17} weight="fill" />
+              ) : (
+                <XCircle size={17} weight="fill" />
+              )
+            ) : (
+              i + 1
+            )}
+          </li>
+        ))}
+      </ol>
       <section className="quiz-content">
-        <div className="eyebrow">{q.label}</div>
+        <div className="eyebrow quiz-phase">
+          {phase === "answering"
+            ? "01 回想答案"
+            : phase === "recalled"
+              ? "02 对照自评"
+              : "03 记录结果"}
+        </div>
+        <p className="quiz-question-label">{q.label}</p>
         <h1 className="quiz-prompt">{q.prompt}</h1>
         {!["author", "title"].includes(q.mode) && (
           <p className="quiz-attribution">
@@ -341,13 +442,28 @@ export function Trainer({ poems, state, onAttempt, context, onRead, onDone }) {
         >
           <Timer size={24} />
           <span>
-            {(elapsed / 1000).toFixed(1)}
+            {(seconds && phase === "answering"
+              ? Math.max(0, seconds - elapsed / 1000)
+              : elapsed / 1000
+            ).toFixed(1)}
             <small>秒</small>
           </span>
           <span className="timer-limit">
-            {seconds ? `/ ${seconds}秒` : "不限时"}
+            {phase === "answering" && seconds ? "剩余时间" : "本题用时"}
           </span>
         </div>
+        {seconds > 0 && (
+          <div
+            className={`countdown-track ${elapsed >= seconds * 800 ? "urgent" : ""}`}
+            aria-hidden="true"
+          >
+            <span
+              style={{
+                width: `${Math.max(0, 1 - elapsed / (seconds * 1000)) * 100}%`,
+              }}
+            />
+          </div>
+        )}
         {phase === "answering" && (
           <>
             {answerMode === "type" ? (
@@ -379,6 +495,7 @@ export function Trainer({ poems, state, onAttempt, context, onRead, onDone }) {
               </form>
             ) : (
               <button
+                ref={recallRef}
                 className="button recall-button"
                 onClick={() => {
                   setElapsed(performance.now() - startAt.current);
@@ -415,7 +532,7 @@ export function Trainer({ poems, state, onAttempt, context, onRead, onDone }) {
           </>
         )}
         {phase === "recalled" && (
-          <div className="recalled-panel">
+          <div className="recalled-panel" ref={phaseRef} tabIndex={-1}>
             <div className="eyebrow">对照答案，诚实自评</div>
             <p className="correct-answer">{q.answer}</p>
             <p className="muted">在揭晓之前，你是否已完整想出答案？</p>
@@ -439,6 +556,8 @@ export function Trainer({ poems, state, onAttempt, context, onRead, onDone }) {
           <div
             className={`quiz-feedback ${result.correct ? "success" : "retry"}`}
             role="status"
+            ref={phaseRef}
+            tabIndex={-1}
           >
             <div className="feedback-label">
               {result.correct ? (
@@ -465,7 +584,12 @@ export function Trainer({ poems, state, onAttempt, context, onRead, onDone }) {
               </>
             )}
             <div className="feedback-bottom">
-              <SourceLink poem={poem} />
+              <div className="feedback-links">
+                <SourceLink poem={poem} />
+                <button className="text-button" onClick={() => onRead(poem.id)}>
+                  回原文巩固 <ArrowRight size={15} />
+                </button>
+              </div>
               <button className="button" onClick={next}>
                 {index + 1 === round.questions.length
                   ? "查看本轮结果"
@@ -473,6 +597,10 @@ export function Trainer({ poems, state, onAttempt, context, onRead, onDone }) {
                 <ArrowRight size={20} />
               </button>
             </div>
+            <p className="feedback-save-note">
+              {result.correct ? "已记录本题结果" : "已加入错句复习"} ·
+              已完成的题目会保留记录
+            </p>
           </div>
         )}
       </section>

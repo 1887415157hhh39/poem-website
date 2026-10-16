@@ -53,6 +53,14 @@ export function App() {
     [trainingKey, setTrainingKey] = useState(0),
     [toast, setToast] = useState("");
   const [date, setDate] = useState(todayKey());
+  const [libraryView, setLibraryView] = useState({
+    query: "",
+    category: "全部",
+    status: "all",
+    limit: 30,
+    scrollY: 0,
+    focusId: null,
+  });
   useEffect(() => {
     const id = setInterval(() => setDate(todayKey()), 60000);
     return () => clearInterval(id);
@@ -78,9 +86,30 @@ export function App() {
     if (cloud.recovery) navigate("settings");
   }, [cloud.recovery, navigate]);
   useEffect(() => {
+    const label =
+      route.page === "read"
+        ? poems.find((p) => p.id === route.id)?.title || "诗词阅读"
+        : {
+            today: "今日计划",
+            library: "全部篇目",
+            train: "抢答训练",
+            mistakes: "错句复习",
+            settings: "设置与同步",
+          }[route.page];
+    document.title = `${label} · 温故`;
+  }, [route.page, route.id]);
+  useEffect(() => {
     setToast("");
     setTrainingContext(null);
     setTrainingKey((k) => k + 1);
+    setLibraryView({
+      query: "",
+      category: "全部",
+      status: "all",
+      limit: 30,
+      scrollY: 0,
+      focusId: null,
+    });
   }, [cloud.session?.user.id]);
   function read(id) {
     setState((s) => ({ ...s, lastPoem: id }));
@@ -95,6 +124,11 @@ export function App() {
   const current = poems.find((p) => p.id === state.lastPoem) || poems[0];
   const selected = poems.find((p) => p.id === route.id) || poems[0];
   const learned = Object.keys(state.learning).length;
+  const dailyTotal =
+    plan.studiedToday.length + plan.due.length + plan.newPoems.length;
+  const dailyPercent = dailyTotal
+    ? Math.round((plan.studiedToday.length / dailyTotal) * 100)
+    : 0;
   function rate(id, rating) {
     setState((s) => scheduleReview(s, id, rating, date));
     setToast(
@@ -145,7 +179,11 @@ export function App() {
             <button
               key={id}
               className={`nav-item ${route.page === id || (id === "library" && route.page === "read") ? "active" : ""}`}
-              aria-current={route.page === id ? "page" : undefined}
+              aria-current={
+                route.page === id || (id === "library" && route.page === "read")
+                  ? "page"
+                  : undefined
+              }
               onClick={() => (id === "train" ? train() : navigate(id))}
             >
               <Icon size={24} />
@@ -246,8 +284,40 @@ export function App() {
           {route.page === "today" && (
             <>
               <section className="home-heading">
+                <div className="eyebrow home-kicker">温故知新 · 每日备赛</div>
                 <h1>今天，记牢一点，再快一点。</h1>
                 <p>院级诗词大赛 · 11月上半月</p>
+              </section>
+              <section className="today-launch" aria-label="今日学习进度">
+                <div className="today-launch-copy">
+                  <span className="eyebrow">
+                    {dailyTotal && plan.studiedToday.length === dailyTotal
+                      ? "今日背诵已完成"
+                      : "今日背诵计划"}
+                  </span>
+                  <strong>
+                    已完成 <b>{plan.studiedToday.length}</b>
+                    <span> / {dailyTotal}篇</span>
+                  </strong>
+                  <div
+                    className="progress-track"
+                    role="progressbar"
+                    aria-label="今日背诵进度"
+                    aria-valuemin={0}
+                    aria-valuemax={100}
+                    aria-valuenow={dailyPercent}
+                  >
+                    <span style={{ width: `${dailyPercent}%` }} />
+                  </div>
+                </div>
+                <button className="button" onClick={dailyStart}>
+                  {plan.due.length
+                    ? "开始今日复习"
+                    : plan.newPoems.length
+                      ? "开始今日背诵"
+                      : "进入抢答训练"}
+                  <ArrowRight size={20} />
+                </button>
               </section>
               <div className="study-path">
                 {[
@@ -324,12 +394,6 @@ export function App() {
                       </button>
                     ))}
                   </div>
-                  <button className="button daily-start" onClick={dailyStart}>
-                    {plan.due.length || plan.newPoems.length
-                      ? "开始今日训练"
-                      : "进入抢答训练"}
-                    <ArrowRight size={22} />
-                  </button>
                   <p className="plan-caption">先巩固，再提速。</p>
                   <div className="overall-progress">
                     <div>
@@ -338,7 +402,14 @@ export function App() {
                       </span>
                       <span>{Math.round((learned / 200) * 100)}%</span>
                     </div>
-                    <div className="progress-track">
+                    <div
+                      className="progress-track"
+                      role="progressbar"
+                      aria-label="全部篇目学习进度"
+                      aria-valuemin={0}
+                      aria-valuemax={200}
+                      aria-valuenow={learned}
+                    >
                       <span style={{ width: `${(learned / 200) * 100}%` }} />
                     </div>
                   </div>
@@ -373,7 +444,17 @@ export function App() {
             </>
           )}
           {route.page === "library" && (
-            <Library poems={poems} state={state} onRead={read} />
+            <Library
+              poems={poems}
+              state={state}
+              view={libraryView}
+              setView={setLibraryView}
+              onRead={(id) => {
+                const scrollY = window.scrollY;
+                setLibraryView((v) => ({ ...v, scrollY, focusId: id }));
+                read(id);
+              }}
+            />
           )}
           {route.page === "read" && (
             <Reader
@@ -395,6 +476,7 @@ export function App() {
               onAttempt={(q, a) => setState((s) => recordAttempt(s, q, a))}
               onRead={read}
               onDone={() => navigate("today")}
+              onMistakes={() => navigate("mistakes")}
             />
           )}
           {route.page === "mistakes" && (
@@ -433,6 +515,11 @@ export function App() {
               route.page === id || (id === "library" && route.page === "read")
                 ? "active"
                 : ""
+            }
+            aria-current={
+              route.page === id || (id === "library" && route.page === "read")
+                ? "page"
+                : undefined
             }
             onClick={() => (id === "train" ? train() : navigate(id))}
           >
