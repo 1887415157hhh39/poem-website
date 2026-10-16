@@ -12,6 +12,8 @@
 - 独立Playwright浏览器，使用两份隔离的浏览器Context和拦截的Supabase接口：注册/重设请求的根地址回跳、登录失败中文提示、显式访客合并、第二设备下载、断网更改与另一设备同时学习后的合并、退出恢复访客、其他账号不继承记录，均通过。此项是浏览器集成模拟，不代表真实邮件投递或真实账号跨设备验收。
 - 独立Playwright密码恢复模拟：识别recovery回调、移除URL中的token、进入新密码表单、提交密码修改、刷新后恢复同一账号并同步，均通过。
 - 320、390、834、1440像素宽度无水平溢出；登录/已登录页axe WCAG 2 A/AA及2.1 AA扫描均0项违规；浏览器模拟无未捕获异常。移动登录截图见`docs/design/email-login-mobile.png`。
+- 正式部署提交`f278537`，GitHub Actions[38862212988](https://github.com/1887415157hhh39/poem-website/actions/runs/38862212988)构建、测试与发布均成功。线上隔离浏览器向真实Supabase发送一次保留域名邮箱的无效登录，返回400并显示中文凭据错误，没有发送邮件；注册表单、项目子目录、PDF HEAD 200与类型、390像素无溢出、axe 0项、无未捕获异常均核对。截图初次等待字体加载超时，随后正式页面`document.fonts.status=loaded`并成功截图`docs/design/email-production-mobile.png`。
+- 实际公开Auth设置确认邮箱登录与注册开启、邮箱确认开启、匿名登录关闭。Supabase安全Advisor返回空列表。
 
 ## 需要使用者完成的真实验收
 

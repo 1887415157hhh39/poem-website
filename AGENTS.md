@@ -10,6 +10,7 @@
 - User requested GitHub hosting; deploy the static client through GitHub Pages. Current project is the authorized checkout.
 - Browser fallback: user explicitly allowed independent Playwright verification after in-app browser connection failed.
 - User requested cross-device progress and chose email login on2026-10-16. Extend the existing site with Supabase email/password authentication, explicit guest-progress import, account-isolated offline caches and conflict-safe synchronization. Do not claim cloud sync is live until the backend is connected and verified.
+- Supabase backend `wengu-poetry` / `zlmpibqtsrdmhmlhxbsx` is provisioned in the user's default Free organization, Singapore region. Migration and live RLS/CAS checks passed. Public URL/key are GitHub repository Variables; never commit `.env.local` or management keys. User confirmed both Auth Site URL and Redirect URLs as the GitHub Pages root. Email confirmation remains enabled; default SMTP currently requires a project-team email. Release `f278537` is deployed; real user email confirmation and two-device account acceptance remain pending, separate from successful mocked browser tests. See `docs/email-sync-qa.md`.
 
 Run the local server yourself and open the preview in the browser available to this environment. Do not give the user server-start instructions when you can run it.
 
